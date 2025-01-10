@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  background-color: rgb(201, 226, 226);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.mainList {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  gap: 4px;
+  font-size: 1.4rem;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  gap: 4px;
+}
+
+.fa-solid {
+  padding: 4px;
+}
+
+.taskAdder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.addInput {
+  width: 60%;
+  font-size: 1.1rem;
+}
