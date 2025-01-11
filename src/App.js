@@ -11,7 +11,6 @@ function App() {
     setTasks(
       tasks.map((t) => {
         if (t.id === task.id) {
-          console.log(t.isCompleted);
           return {
             id: t.id,
             text: t.text,
@@ -24,7 +23,21 @@ function App() {
     );
   }
 
-  function changeTask(task) {}
+  function changeTask(e, task) {
+    setTasks(
+      tasks.map((t) => {
+        if (t.id === task.id) {
+          return {
+            id: t.id,
+            text: e.target.value,
+            isCompleted: t.isCompleted,
+          };
+        } else {
+          return t;
+        }
+      })
+    );
+  }
 
   function deleteTask(task) {
     setTasks(tasks.filter((t) => task.id !== t.id));

@@ -28,13 +28,30 @@ body {
   justify-content: space-between;
 }
 
+.itemName {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .icons {
   display: flex;
+  align-items: stretch;
   gap: 6px;
 }
 
 .fa-solid {
   padding: 4px;
+}
+
+.text {
+  font-size: 1.1rem;
+  align-items: stretch;
+}
+
+.editInput {
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
 }
 
 .taskAdder {
