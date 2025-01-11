@@ -7,7 +7,7 @@ function App() {
   const [id, setId] = useState(0);
   const [tasks, setTasks] = useState([]);
 
-  function handleClick(task) {
+  function toggleComplete(task) {
     setTasks(
       tasks.map((t) => {
         if (t.id === task.id) {
@@ -22,6 +22,12 @@ function App() {
         }
       })
     );
+  }
+
+  function changeTask(task) {}
+
+  function deleteTask(task) {
+    setTasks(tasks.filter((t) => task.id !== t.id));
   }
 
   function handleAddClick(text) {
@@ -42,7 +48,12 @@ function App() {
         <Header />
       </header>
       <main>
-        <List tasks={tasks} handleClick={handleClick} />
+        <List
+          tasks={tasks}
+          toggleComplete={toggleComplete}
+          changeTask={changeTask}
+          deleteTask={deleteTask}
+        />
       </main>
       <footer>
         <TaskAdd handleAddClick={handleAddClick} />
