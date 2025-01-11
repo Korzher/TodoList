@@ -20,6 +20,7 @@ body {
   height: 85vh;
   gap: 4px;
   font-size: 1.4rem;
+  margin: 0 20px 0 20px;
 }
 
 .listItem {
@@ -28,7 +29,8 @@ body {
 }
 
 .icons {
-  gap: 4px;
+  display: flex;
+  gap: 6px;
 }
 
 .fa-solid {

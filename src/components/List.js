@@ -1,46 +1,12 @@
-export default function List() {
-  const tasks = [
-    {
-      id: 1,
-      task: "Добавить лист",
-      completed: true,
-    },
-    {
-      id: 2,
-      task: "Добавить задачи",
-      completed: true,
-    },
-    {
-      id: 3,
-      task: "Добавить логику",
-      completed: false,
-    },
-    {
-      id: 4,
-      task: "Все это связать",
-      completed: false,
-    },
-    {
-      id: 5,
-      task: "Сделать все более менее красиво",
-      completed: false,
-    },
-    {
-      id: 6,
-      task: "Сделать адаптив",
-      completed: false,
-    },
-    {
-      id: 7,
-      task: "Задеплоить",
-      completed: false,
-    },
-  ];
-
-  const taskList = tasks.map((tasks, index) => (
-    <li className="listItem" key={tasks.id}>
-      <div>
-        {index + 1}. {tasks.task}
+export default function List({ tasks, handleClick }) {
+  const taskList = tasks.map((task) => (
+    <li className="listItem" key={task.id}>
+      <div
+        onClick={() => {
+          handleClick(task);
+        }}
+      >
+        {task.isCompleted ? <s>{task.text}</s> : task.text}
       </div>
       <div className="icons">
         <button>
@@ -55,7 +21,7 @@ export default function List() {
 
   return (
     <>
-      <ul className="mainList">{taskList} </ul>
+      <ol className="mainList">{taskList} </ol>
     </>
   );
 }
