@@ -44,6 +44,9 @@ function App() {
   }
 
   function handleAddClick(text) {
+    if (text === "") {
+      return;
+    }
     setId(id + 1);
     setTasks([
       ...tasks,

@@ -52,6 +52,7 @@ body {
   width: 100%;
   font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
+  border-radius: 0.25rem;
 }
 
 .taskAdder {
@@ -64,4 +65,5 @@ body {
 .addInput {
   width: 60%;
   font-size: 1.1rem;
+  border-radius: 0.25rem;
 }
