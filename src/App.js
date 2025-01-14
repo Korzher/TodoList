@@ -44,7 +44,7 @@ function App() {
   }
 
   function handleAddClick(text) {
-    if (text === "") {
+    if (text.trim() === "") {
       return;
     }
     setId(id + 1);
@@ -59,7 +59,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="fullContent">
       <header>
         <Header />
       </header>
